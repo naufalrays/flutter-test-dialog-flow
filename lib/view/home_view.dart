@@ -81,7 +81,10 @@ class _HomeViewState extends State<HomeView> {
   }
 
   addMessage(Message message, [bool isUserMessage = false]) {
-    // print('response data: ${message.payload}');
+    // print('response data 1 : ${message}');
+    // print('response data 2 : ${message.text!.text![0]}');
+    // print('response data 3 : ${message.quickReplies}');
+    print('response data 3 : ${message.payload?["data"]}');
     // print(message.payload!["title"][0]);
     // print(message.payload?["richContent"][0][0]["subtitle"]);
     messages.add({"message": message, "isUserMessage": isUserMessage});
